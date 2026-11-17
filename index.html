@@ -51,7 +51,7 @@ footer{text-align:center;color:#a995a5;font-size:11px;padding:15px 20px 35px}
 <body>
 <div id="stars"></div><div id="burst"></div>
 <nav><span>یک قصه‌ی دونفره</span><span>♡</span><span>فصل دوم</span></nav>
-<div class="music"><button id="play" aria-label="پخش موسیقی">▶</button><div><b>آهنگِ قصه‌ی ما</b><small id="musicState">تلاش برای پخش خودکار</small><a href="https://pixabay.com/music/solo-piano-beautiful-romantic-piano-166945/" target="_blank" rel="noopener" style="display:block;color:#ffb6cb;font-size:10px;text-decoration:underline">شنیدن / دریافت آهنگ از Pixabay</a></div><audio id="song" src="music.mp3" loop preload="auto" autoplay></audio></div>
+<div class="music"><button id="play" aria-label="پخش موسیقی">▶</button><div><b>آهنگِ قصه‌ی ما</b><small id="musicState">تلاش برای پخش خودکار</small></div><audio id="song" src="https://dl.rozmusic.com/Music/1404/05/30/Reza%20Bahram%20-%20Che%20Konam.mp3" loop preload="auto" autoplay></audio></div>
 
 <section class="hero">
  <div class="eyebrow">برای صاحبِ قشنگ‌ترین لبخندم</div>
@@ -94,7 +94,7 @@ for(let i=0;i<85;i++){let s=document.createElement('i');s.className='star';s.sty
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target);}}),{threshold:.18});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const audio=document.getElementById('song'),play=document.getElementById('play'),state=document.getElementById('musicState');
-async function startMusic(){try{await audio.play();play.textContent='Ⅱ';state.textContent='در حال پخش موسیقی';return true}catch(e){state.textContent='پخش خودکار مسدود شد؛ برای آهنگ لمس کن یا لینک آهنگ را باز کن';return false}}
+async function startMusic(){try{await audio.play();play.textContent='Ⅱ';state.textContent='در حال پخش موسیقی';return true}catch(e){state.textContent='برای شروع آهنگ دکمه پخش را بزن';return false}}
 startMusic();
 play.addEventListener('click',async()=>{if(audio.paused){await startMusic()}else{audio.pause();play.textContent='▶';state.textContent='موسیقی متوقف شد';}});
 ['pointerdown','touchstart','keydown'].forEach(evt=>window.addEventListener(evt,()=>{if(audio.paused)startMusic()},{once:true,passive:true}));
