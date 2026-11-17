@@ -64,7 +64,52 @@ body:after{width:420px;height:420px;right:-210px;bottom:2%;background:radial-gra
 /* Keep every uploaded photo fully visible in the collage: never crop faces or bodies */
 .photo-grid .photo-card img{object-fit:contain!important;background:radial-gradient(ellipse at center,#211523,#0b0810);transform:none!important}
 .photo-grid .photo-card:hover img{transform:none!important;filter:none!important}
-</style></head><body><div id="sparkles" aria-hidden="true"></div><main class="wrap">
+</style><style id="album-layout-fix">
+/* Fix album card sizing: let cards grow naturally and reserve a real image area. */
+.photo-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  grid-auto-rows:auto !important;
+  grid-auto-flow:row !important;
+  align-items:stretch !important;
+}
+.photo-grid .photo-card{
+  height:auto !important;
+  min-height:0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-self:stretch !important;
+  overflow:hidden !important;
+}
+.photo-grid .photo-card img{
+  display:block !important;
+  flex:0 0 auto !important;
+  width:100% !important;
+  height:230px !important;
+  min-height:0 !important;
+  max-height:42vh !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:radial-gradient(ellipse at center,#211523,#0b0810) !important;
+  transform:none !important;
+}
+.photo-grid .photo-card.mosaic-feature{grid-column:span 2 !important;grid-row:auto !important}
+.photo-grid .photo-card.mosaic-feature img{height:340px !important;max-height:52vh !important}
+.photo-grid .photo-card.mosaic-wide{grid-column:span 2 !important;grid-row:auto !important}
+.photo-grid .photo-card.mosaic-wide img{height:260px !important}
+.photo-grid .photo-card.mosaic-tall{grid-column:span 1 !important;grid-row:auto !important}
+.photo-grid .photo-card.mosaic-tall img{height:300px !important;max-height:48vh !important}
+.photo-grid .photo-card .small{flex:none !important;min-height:0 !important;overflow:visible !important}
+.photo-grid .photo-card .btn{flex:none !important;align-self:flex-start !important}
+.photo-grid .photo-card:hover img{transform:none !important;filter:none !important}
+@media(max-width:700px){
+ .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:9px !important}
+ .photo-grid .photo-card img{height:190px !important;max-height:38vh !important}
+ .photo-grid .photo-card.mosaic-feature img{height:280px !important;max-height:45vh !important}
+ .photo-grid .photo-card.mosaic-wide img{height:210px !important}
+ .photo-grid .photo-card.mosaic-tall img{height:250px !important;max-height:42vh !important}
+}
+</style>
+</head><body><div id="sparkles" aria-hidden="true"></div><main class="wrap">
 <section id="gate" class="glass center"><div class="hero3d"><img class="crystal-heart-img" src="https://raw.githubusercontent.com/v2gurd/Love/main/heart.png" alt="قلب ما"></div><h1>یه جای کوچیک برای دنیای دونفره‌مون</h1><p class="muted">این گوشه فقط برای من و توئه</p><input id="mainPass" class="field" type="password" placeholder="رمز ورود مشترک" autocomplete="current-password"><button class="btn" id="enterBtn" onclick="enterSite()">ورود به دنیای ما</button><p id="gateError" class="status"></p></section>
 <div id="app" class="hidden"><header class="glass center"><div class="hero3d"><img class="crystal-heart-img" src="https://raw.githubusercontent.com/v2gurd/Love/main/heart.png" alt="قلب ما"></div><h1>برای تبسم، با تمام قلبم</h1><p class="muted">بعضی آدم‌ها خودِ آرامش‌اند؛ تو برای من همونی</p><div class="anniversary"><div class="small">از روزی که ما «ما» شدیم</div><div id="annivCount" class="count">دو ماه کنار هم</div><div id="annivSub" class="subcount">۱۸ سپتامبر ۲۰۲۶ · شروع قصه‌مون</div></div><audio id="song" controls loop style="width:100%;margin-top:12px"><source src="https://dl.rozmusic.com/Music/1404/05/30/Reza%20Bahram%20-%20Che%20Konam.mp3" type="audio/mpeg"></audio><p class="small">برای پخش آهنگ، دکمه پخش را لمس کن</p></header>
 <nav class="tabs"><button class="btn" onclick="show('letter')">نامه عاشقانه</button><button class="btn alt" onclick="show('album');if(!galleryLoaded)loadGallery()">آلبوم خاطره‌ها</button><button class="btn alt" onclick="show('music');loadSongs()">آهنگ‌های ما</button><button class="btn alt" onclick="show('private')">دفتر خصوصی احسان</button><button class="btn alt" onclick="show('feelings');loadMoods()">حال و احساس ما <span id="moodBadge" class="pill">۰</span></button></nav>
