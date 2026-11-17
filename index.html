@@ -1,104 +1,11 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#100d18">
-<title>برای تو، قشنگ‌ترین اتفاق من ❤️</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
-:root{--bg:#100d18;--pink:#ff8eae;--rose:#f45d89;--cream:#fff1f5;--muted:#c9b9c5}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Vazirmatn,Tahoma,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 15% 20%,#54213d88,transparent 38%),radial-gradient(ellipse at 85% 65%,#34265e88,transparent 40%),linear-gradient(145deg,#100d18,#1b1021 55%,#100d18)}
-#stars{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.55;animation:twinkle 3s infinite ease-in-out alternate}@keyframes twinkle{to{opacity:.12;transform:scale(.5)}}
-nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:8px;align-items:center;padding:8px 13px;border:1px solid #ffffff20;border-radius:30px;background:#ffffff12;backdrop-filter:blur(18px);box-shadow:0 8px 35px #0003}
-nav span{font-size:12px;color:#ffe2eb;letter-spacing:.4px}
-.music{position:fixed;z-index:12;left:18px;bottom:18px;display:flex;align-items:center;gap:10px;padding:9px 13px;border:1px solid #ffffff25;border-radius:40px;background:#241827cc;backdrop-filter:blur(18px);box-shadow:0 10px 35px #0005}
-.music button{border:0;background:linear-gradient(135deg,#ff9ab8,#e84e82);color:#fff;width:38px;height:38px;border-radius:50%;font-size:16px;cursor:pointer;box-shadow:0 0 20px #f45d8977}
-.music small{display:block;color:#f6dce6;font-size:10px}.music b{font-size:12px;font-weight:500}
-section{min-height:100svh;padding:100px 22px 80px;display:flex;align-items:center;justify-content:center;position:relative}
-.hero{text-align:center;flex-direction:column;gap:22px}
-.eyebrow{color:#ffb6cb;font-size:13px;letter-spacing:2px}
-h1{font-size:clamp(35px,8vw,76px);line-height:1.45;margin:0;font-weight:800;background:linear-gradient(100deg,#fff,#ffc1d4 45%,#ff7da5);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 10px 45px #ff77a533}
-.hero p{max-width:560px;color:#e6d3df;line-height:2.2;font-size:15px;margin:0}
-.scroll{margin-top:16px;color:#ffb5cb;font-size:12px;animation:bob 2s infinite}@keyframes bob{50%{transform:translateY(8px)}}
-.scene{width:190px;height:190px;perspective:700px;margin:8px auto 5px;position:relative}
-.heart3d{position:absolute;inset:5px;display:grid;place-items:center;filter:drop-shadow(0 15px 35px #ff477b88);animation:heartFloat 4s ease-in-out infinite;transform-style:preserve-3d}.heart3d img{width:100%;height:100%;object-fit:contain;mix-blend-mode:screen}
-@keyframes heartFloat{0%,100%{transform:translateY(0) rotateY(-16deg) rotateX(10deg) scale(1)}50%{transform:translateY(-16px) rotateY(16deg) rotateX(-8deg) scale(1.08)}}
-.orbit{position:absolute;inset:12px;border:1px solid #ff9fbd66;border-radius:50%;transform:rotateX(68deg) rotateZ(-20deg);animation:orbit 9s linear infinite}.orbit:after{content:"";position:absolute;top:12px;left:22px;width:9px;height:9px;border-radius:50%;background:#ffd8e4;box-shadow:0 0 18px #ff8eae}
-@keyframes orbit{to{transform:rotateX(68deg) rotateZ(340deg)}}
-.content{width:min(760px,100%);text-align:center}
-.kicker{color:#ff9fba;font-size:12px;letter-spacing:1.5px;margin-bottom:12px}
-h2{font-size:clamp(25px,5vw,42px);margin:0 0 24px;color:#fff0f5}
-.letter{position:relative;padding:clamp(24px,5vw,48px);border:1px solid #ffffff20;border-radius:28px;background:linear-gradient(145deg,#ffffff13,#ffffff06);backdrop-filter:blur(16px);box-shadow:0 25px 80px #0005;line-height:2.35;color:#f4e4eb;font-size:clamp(14px,2.5vw,17px);overflow:hidden;transform-style:preserve-3d}
-.letter:before{content:"";position:absolute;inset:-50%;background:linear-gradient(110deg,transparent 40%,#ffffff0c 50%,transparent 60%);transform:translateX(-50%) rotate(15deg);animation:shine 7s infinite}
-@keyframes shine{to{transform:translateX(50%) rotate(15deg)}}
-.letter p{margin:0 0 16px;position:relative}.letter p:last-child{margin:0}
-.letter .highlight{color:#ffb5ca;font-weight:700}
-.reveal{opacity:0;transform:translateY(45px) scale(.97);transition:1s cubic-bezier(.2,.8,.2,1)}.reveal.show{opacity:1;transform:translateY(0) scale(1)}
-.symbol{font-size:54px;margin:0 auto 20px;filter:drop-shadow(0 10px 25px #ff659477);animation:float 4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-12px) rotate(5deg)}}
-.ring{width:140px;height:140px;margin:0 auto 25px;border-radius:50%;border:1px solid #ff9cba88;display:grid;place-items:center;box-shadow:0 0 50px #ff669933,inset 0 0 40px #ff669922;animation:ring 5s ease-in-out infinite}
-@keyframes ring{50%{transform:scale(1.08);box-shadow:0 0 80px #ff669955,inset 0 0 50px #ff669933}}
-.final{min-height:85svh;text-align:center;flex-direction:column}
-.final .letter{max-width:650px}
-.signature{font-size:22px;color:#ffb1c8;margin-top:25px}
-button:focus-visible{outline:2px solid white;outline-offset:4px}
-#burst{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}.particle{position:absolute;bottom:-30px;animation:rise var(--t) ease-out forwards;font-size:var(--s)}@keyframes rise{to{transform:translate(var(--x),-110vh) rotate(540deg);opacity:0}}
-footer{text-align:center;color:#a995a5;font-size:11px;padding:15px 20px 35px}
-@media(max-width:520px){section{padding-left:17px;padding-right:17px}.music{left:12px;bottom:12px}.letter{border-radius:22px}}
-</style>
-</head>
-<body>
-<div id="stars"></div><div id="burst"></div>
-<nav><span>یک قصه‌ی دونفره</span><span>♡</span><span>فصل دوم</span></nav>
-<div class="music"><button id="play" aria-label="پخش موسیقی">▶</button><div><b>آهنگِ قصه‌ی ما</b><small id="musicState">تلاش برای پخش خودکار</small></div><audio id="song" src="https://dl.rozmusic.com/Music/1404/05/30/Reza%20Bahram%20-%20Che%20Konam.mp3" loop preload="auto" autoplay></audio></div>
-
-<section class="hero">
- <div class="eyebrow">برای صاحبِ قشنگ‌ترین لبخندم</div>
- <div class="scene"><div class="orbit"></div><div class="heart3d"><img src="heart.png" alt="قلب شیشه‌ای سه‌بعدی"></div></div>
- <h1>جوابِ من به تو...</h1>
- <p>بعضی حرف‌ها رو نمی‌شه فقط با چند جمله جواب داد؛ برای همین خواستم جوابِ دوست داشتنِ تو رو، توی یه گوشه‌ی کوچیک از دنیای خودمون بنویسم.</p>
- <div class="scroll">آروم بیا پایین، این قصه برای توئه <div>⌄</div></div>
-</section>
-
-<section><div class="content reveal">
- <div class="symbol">🌙</div><div class="kicker">از همون شروعِ قشنگ</div><h2>منم هنوز یادمه...</h2>
- <div class="letter"><p>عشق من،</p><p>نمی‌دونم تو از کدوم لحظه فهمیدی من برات فرق دارم، ولی من می‌دونم از وقتی وارد دنیام شدی، خیلی چیزا رنگ دیگه‌ای گرفتن. شاید هنوز اول راه باشیم، شاید هنوز کلی چیز برای شناختن و تجربه کردن داشته باشیم، اما همین اول راه هم تو برای من یه اتفاق معمولی نیستی.</p><p>منم از تک‌تک لحظه‌هایی که کنار هم ساختیم خاطره دارم؛ حتی از اون لحظه‌های ساده‌ای که شاید به چشم نیان، ولی برای من عزیزن.</p></div>
- </div></section>
-
-<section><div class="content reveal">
- <div class="ring"><span style="font-size:58px">🫶</span></div><div class="kicker">قولی که از ته دلمه</div><h2>من دنبالِ کامل بودن نیستم</h2>
- <div class="letter"><p>منم ازت آدم بی‌نقص نمی‌خوام. خودِ خودت رو می‌خوام؛ با خنده‌هات، حساسیت‌هات، شیطنت‌هات و حتی روزایی که حوصله‌ی هیچ‌چیزی رو نداری.</p><p>قول نمی‌دم هیچ‌وقت بحث نکنیم یا همیشه همه‌چیز آسون باشه، ولی دلم می‌خواد وقتی چیزی بینمون سخت شد، به‌جای دور شدن، بیشتر حرف بزنیم و همدیگه رو بفهمیم.</p><p class="highlight">من دوست دارم انتخابِ همدیگه بمونیم، حتی توی روزهای معمولی و سخت.</p></div>
- </div></section>
-
-<section><div class="content reveal">
- <div class="symbol">✨</div><div class="kicker">برای رویاهای دونفره‌مون</div><h2>بیا آینده رو با هم بسازیم</h2>
- <div class="letter"><p>وقتی از آینده فکر می‌کنم، دلم می‌خواد تو رو همون‌جا کنار خودم ببینم؛ وقتی به آرزوهات می‌رسی، وقتی از موفقیت‌هات ذوق می‌کنی و وقتی منم قدمی به چیزی که می‌خوام نزدیک‌تر می‌شم.</p><p>می‌خوام هوای همدیگه رو داشته باشیم، به هم انگیزه بدیم و به‌جای اینکه جلوی راه هم باشیم، دلیل محکم‌تر ادامه دادن هم بشیم.</p><p>شاید هنوز اول قصه باشه، ولی من برای قشنگ نوشتن ادامه‌ش ذوق دارم.</p></div>
- </div></section>
-
-<section><div class="content reveal">
- <div class="symbol">💌</div><div class="kicker">یه اعتراف کوچیک</div><h2>تو برای من عزیزی...</h2>
- <div class="letter"><p>ممنونم که این‌قدر قشنگ احساست رو بهم گفتی. خوندن حرفات لبخند آورد روی لبم و یادم انداخت که چقدر خوبه آدم کسی رو داشته باشه که باهاش از آینده حرف بزنه.</p><p>من شاید همیشه نتونم همه‌ی چیزایی رو که توی دلمه درست و قشنگ به زبون بیارم، اما بدون بودنت برام مهمه و دوست دارم این رابطه رو با توجه، احترام، صداقت و عشق جلو ببریم.</p><p class="highlight">دو ماهگیمون مبارک، قشنگِ من. این تازه شروعِ ماست ❤️</p></div>
- </div></section>
-
-<section class="final"><div class="content reveal">
- <div class="scene"><div class="orbit"></div><div class="heart3d"><img src="heart.png" alt="قلب شیشه‌ای سه‌بعدی"></div></div>
- <div class="kicker">و آخرِ حرفم...</div><h2>دوستت دارم، قشنگ‌ترینم</h2>
- <div class="letter"><p>اگه قرار باشه از بین تمام اتفاق‌های این روزها یکی رو انتخاب کنم، خوشحالم که آشنایی با تو سهم من شده.</p><p>بیا کاری کنیم چند ماه و چند سال بعد، وقتی به امروز نگاه می‌کنیم، از اینکه همدیگه رو انتخاب کردیم خوشحال باشیم.</p><p class="signature">ماهگردمون مبارک، عشقِ من ❤️</p></div>
- <div class="signature">برای تو، از طرفِ من</div>
- </div></section>
-<footer>با عشق ساخته شده، فقط برای تو ♡</footer>
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#160b16"><title>برای تبسم، با عشق</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#48203b 0,#1b101d 48%,#0b0910 100%);color:#fff;font-family:Vazirmatn, sans-serif;min-height:100vh}button,input,textarea{font:inherit}.wrap{max-width:850px;margin:auto;padding:24px 16px 60px}.glass{background:#ffffff0d;border:1px solid #ffffff20;backdrop-filter:blur(18px);border-radius:26px;padding:22px;box-shadow:0 20px 70px #0005}.center{text-align:center}.hidden{display:none!important}.muted{color:#d9c5d3}.btn{border:0;border-radius:15px;padding:12px 20px;background:linear-gradient(135deg,#ff739e,#c52f69);color:white;font-weight:700;cursor:pointer;margin:5px}.btn.alt{background:#ffffff15;border:1px solid #ffffff25}.field{width:100%;border:1px solid #ffffff25;background:#100b16;color:#fff;border-radius:14px;padding:13px;margin:8px 0;outline:none}.heart{font-size:90px;line-height:1.5;filter:drop-shadow(0 0 22px #ff4d91);animation:pulse 2s infinite}@keyframes pulse{50%{transform:scale(1.08);filter:drop-shadow(0 0 35px #ff8ab7)}}h1{font-size:clamp(25px,6vw,42px);margin:0 0 8px}.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0}.section{margin-top:16px}.memory{background:#ffffff0c;border:1px solid #ffffff18;border-radius:18px;padding:14px;margin:10px 0;white-space:pre-wrap}.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}.photo-grid img{width:100%;height:150px;object-fit:cover;border-radius:15px}.small{font-size:13px;color:#d8bdcd}
+</style></head><body><main class="wrap"><section id="gate" class="glass center"><div class="heart">♥</div><h1>یه جای کوچیک برای دنیای دونفره‌مون</h1><p class="muted">برای ورود، رمز خودمون رو وارد کن</p><input id="mainPass" class="field" type="password" placeholder="رمز ورود" autocomplete="off"><button class="btn" onclick="enterSite()">ورود به دنیای ما</button><p id="gateError" class="small"></p></section>
+<div id="app" class="hidden"><header class="glass center"><div class="heart">♥</div><h1>برای تبسم، با تمام قلبم</h1><p class="muted">بعضی آدم‌ها خودِ آرامش‌اند؛ تو برای من همونی</p><audio id="song" controls loop style="width:100%;margin-top:12px"><source src="https://dl.rozmusic.com/Music/1404/05/30/Reza%20Bahram%20-%20Che%20Konam.mp3" type="audio/mpeg"></audio><p class="small">برای پخش آهنگ، دکمه پخش را لمس کن</p></header>
+<nav class="tabs"><button class="btn" onclick="show('letter')">نامه عاشقانه</button><button class="btn alt" onclick="show('album')">آلبوم ما</button><button class="btn alt" onclick="show('private')">دفتر خصوصی من</button></nav>
+<section id="letter" class="glass section"><h2>برای تو تبسم جان</h2><p class="muted" style="line-height:2.2">می‌خواهم بدانی بودنت برای من اتفاق کوچکی نیست. حتی وسط شلوغی روزها، فکر تو می‌تواند حالم را عوض کند. شاید همیشه نتوانم آن‌طور که باید حرف دلم را بزنم، شاید گاهی اشتباه کنم یا ناراحتت کنم، اما دوست داشتنت برایم واقعی و باارزش است. دلم می‌خواهد کنار هم بیشتر بخندیم، بیشتر همدیگر را بفهمیم و خاطره‌هایی بسازیم که سال‌ها بعد با لبخند یادشان کنیم. تو برای من عزیزی؛ خیلی بیشتر از چیزی که گاهی در کلمات جا می‌شود.</p></section>
+<section id="album" class="glass section hidden"><h2>آلبوم خاطره‌هامون</h2><p class="small">عکس‌ها در همین مرورگر ذخیره می‌شوند.</p><input id="photos" class="field" type="file" accept="image/*" multiple><div id="photoGrid" class="photo-grid"></div></section>
+<section id="private" class="glass section hidden"><h2>دفتر خصوصی احسان</h2><div id="privateGate"><p class="muted">این بخش فقط برای خودته</p><input id="privatePass" class="field" type="password" placeholder="رمز بخش خصوصی"><button class="btn" onclick="unlockPrivate()">باز کردن دفتر</button><p id="privateError" class="small"></p></div><div id="privateBody" class="hidden"><textarea id="story" class="field" rows="5" placeholder="چی شد؟ چی ناراحتش کرد؟ هرچی تو دلت هست بنویس..."></textarea><button class="btn" onclick="makeMessage()">ساخت پیام آشتی</button><div id="generated" class="memory hidden"></div><h3>آرشیو نوشته‌ها</h3><div id="archive"></div></div></section><footer class="center small" style="margin-top:22px">ساخته‌شده با عشق ♥</footer></div></main>
 <script>
-const starBox=document.getElementById('stars');
-for(let i=0;i<85;i++){let s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*4+'s';s.style.animationDuration=(2+Math.random()*4)+'s';starBox.appendChild(s)}
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target);}}),{threshold:.18});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const audio=document.getElementById('song'),play=document.getElementById('play'),state=document.getElementById('musicState');
-async function startMusic(){try{await audio.play();play.textContent='Ⅱ';state.textContent='در حال پخش موسیقی';return true}catch(e){state.textContent='برای شروع آهنگ دکمه پخش را بزن';return false}}
-startMusic();
-play.addEventListener('click',async()=>{if(audio.paused){await startMusic()}else{audio.pause();play.textContent='▶';state.textContent='موسیقی متوقف شد';}});
-['pointerdown','touchstart','keydown'].forEach(evt=>window.addEventListener(evt,()=>{if(audio.paused)startMusic()},{once:true,passive:true}));
-function burst(){const box=document.getElementById('burst');for(let i=0;i<22;i++){const p=document.createElement('span');p.className='particle';p.textContent=['♥','♡','✦','💗'][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+'%';p.style.setProperty('--x',(Math.random()*240-120)+'px');p.style.setProperty('--t',(4+Math.random()*4)+'s');p.style.setProperty('--s',(12+Math.random()*20)+'px');box.appendChild(p);setTimeout(()=>p.remove(),8500)}}
-setTimeout(burst,1200);window.addEventListener('scroll',()=>{if(window.scrollY>document.body.scrollHeight*.72)burst()},{passive:true});
-</script>
-</body></html>
+const MAIN='13881385', PRIVATE='En136';function enterSite(){if(document.getElementById('mainPass').value===MAIN){document.getElementById('gate').classList.add('hidden');document.getElementById('app').classList.remove('hidden');renderPhotos();}else document.getElementById('gateError').textContent='رمز ورود درست نیست'}function show(id){document.querySelectorAll('#app .section').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden')}function unlockPrivate(){if(document.getElementById('privatePass').value===PRIVATE){document.getElementById('privateGate').classList.add('hidden');document.getElementById('privateBody').classList.remove('hidden');renderArchive()}else document.getElementById('privateError').textContent='رمز خصوصی اشتباه است'}function makeMessage(){let s=document.getElementById('story').value.trim();if(!s)return;let msg='تبسم جانم، می‌دونم بابت چیزی که پیش اومده ناراحتت کردم و نمی‌خوام احساست رو نادیده بگیرم. '+s+'\n\nتو برام خیلی عزیزی و دلم نمی‌خواد ناراحتی بینمون بمونه. نمی‌خوام فقط با حرف از کنار چیزی که اذیتت کرده رد بشم؛ می‌خوام بهتر بفهممت و جبران کنم. دوستت دارم و امیدوارم بتونیم با آرامش درباره‌ش حرف بزنیم.';let box=document.getElementById('generated');box.textContent=msg;box.classList.remove('hidden');let a=JSON.parse(localStorage.getItem('loveArchive')||'[]');a.unshift({date:new Date().toLocaleString('fa-IR'),text:msg});localStorage.setItem('loveArchive',JSON.stringify(a));renderArchive()}function renderArchive(){let a=JSON.parse(localStorage.getItem('loveArchive')||'[]');document.getElementById('archive').innerHTML=a.map(x=>`<div class="memory"><div class="small">${x.date}</div>${escapeHtml(x.text)}</div>`).join('')||'<p class="small">هنوز نوشته‌ای ذخیره نشده</p>'}function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}document.getElementById('photos').addEventListener('change',e=>{let files=[...e.target.files];let arr=JSON.parse(localStorage.getItem('lovePhotos')||'[]');files.forEach(f=>{let r=new FileReader();r.onload=()=>{arr.push(r.result);localStorage.setItem('lovePhotos',JSON.stringify(arr));renderPhotos()};r.readAsDataURL(f)})});function renderPhotos(){let a=JSON.parse(localStorage.getItem('lovePhotos')||'[]');document.getElementById('photoGrid').innerHTML=a.map((src,i)=>`<div><img src="${src}"><button class="btn alt" onclick="deletePhoto(${i})">حذف</button></div>`).join('')}function deletePhoto(i){let a=JSON.parse(localStorage.getItem('lovePhotos')||'[]');a.splice(i,1);localStorage.setItem('lovePhotos',JSON.stringify(a));renderPhotos()}
+</script></body></html>
